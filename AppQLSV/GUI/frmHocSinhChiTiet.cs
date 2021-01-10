@@ -104,19 +104,30 @@ namespace AppQLSV
                 }
                 else
                 {
-                    var Student = new Student
+                    var SinhVienTrung = db.Students.Where(t => t.ID == ID).FirstOrDefault();
+                    if (SinhVienTrung != null)
                     {
-                        ID = ID,
-                        FirstName = FirstName,
-                        LastName = LastName,
-                        DateOfBirth = DateTime.Parse(DateOfBirth),
-                        PlaceOfBirth = PlaceOfBirth,
-                        Gender = Gender,
-                        IDClassroom = IDClassroom
-                    };
-                    db.Students.Add(Student);
-                    db.SaveChanges();
-                    DialogResult = DialogResult.OK;
+                        MessageBox.Show("Trùng mã sinh viên");
+
+                    }
+                    else
+                    {
+                        var Student = new Student
+                        {
+                            ID = ID,
+                            FirstName = FirstName,
+                            LastName = LastName,
+                            DateOfBirth = DateTime.Parse(DateOfBirth),
+                            PlaceOfBirth = PlaceOfBirth,
+                            Gender = Gender,
+                            IDClassroom = IDClassroom
+                        };
+                        db.Students.Add(Student);
+                        db.SaveChanges();
+                        DialogResult = DialogResult.OK;
+                    }
+
+                    
                 }
                
             }

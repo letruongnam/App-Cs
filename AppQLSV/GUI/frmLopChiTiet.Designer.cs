@@ -82,6 +82,7 @@
             this.btnBoQua.TabIndex = 3;
             this.btnBoQua.Text = "Bỏ Qua";
             this.btnBoQua.UseVisualStyleBackColor = true;
+            this.btnBoQua.Click += new System.EventHandler(this.btnBoQua_Click);
             // 
             // btnDongY
             // 

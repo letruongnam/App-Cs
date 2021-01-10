@@ -13,13 +13,13 @@ namespace AppQLSV.GUI
 {
     public partial class frmLopChiTiet : Form
     {
-        Classroom lopHoc;
+        ClassRoomViewModel lopHoc;
         public frmLopChiTiet()
         {   //thêm mới
             InitializeComponent();
             this.Text = "Thêm mới lớp học";
         }
-        public frmLopChiTiet(Classroom lopHoc)
+        public frmLopChiTiet(ClassRoomViewModel lopHoc)
         {
             //chỉnh sửa
             InitializeComponent();
@@ -79,6 +79,11 @@ namespace AppQLSV.GUI
                 
             }
          
+        }
+
+        private void btnBoQua_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

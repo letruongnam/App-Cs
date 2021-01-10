@@ -61,7 +61,7 @@ namespace AppQLSV
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            var LopDangChon = BDSLopHoc.Current as Classroom;
+            var LopDangChon = BDSLopHoc.Current as ClassRoomViewModel;
             if (LopDangChon != null)
             {
                var rs =   MessageBox.Show("Bạn có thực sự muốn xóa không? ",
@@ -75,6 +75,7 @@ namespace AppQLSV
                     var lop = db.Classrooms.Where(t => t.ID == LopDangChon.ID).FirstOrDefault();
                     if (lop != null)
                     {
+                        
                         var HocSinh = db.Students.Where(t => t.IDClassroom == lop.ID);
                         foreach(Student student in HocSinh)
                         {
@@ -118,7 +119,7 @@ namespace AppQLSV
 
         private void btnSuaLop_Click(object sender, EventArgs e)
         {
-            var lopDangChon = BDSLopHoc.Current as Classroom;
+            var lopDangChon = BDSLopHoc.Current as ClassRoomViewModel;
             if (lopDangChon != null)
             {
                 var f = new frmLopChiTiet(lopDangChon);
@@ -188,7 +189,7 @@ namespace AppQLSV
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            var LopDuocChon = BDSLopHoc.Current as Classroom;
+            var LopDuocChon = BDSLopHoc.Current as ClassRoomViewModel;
             String ID = LopDuocChon.ID;
             var f = new frmEcxel(ID);
             if(f.ShowDialog() == DialogResult.OK)

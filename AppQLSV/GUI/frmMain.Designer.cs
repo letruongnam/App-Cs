@@ -32,6 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.PanelLeft = new System.Windows.Forms.Panel();
             this.gridLopHoc = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongNam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongNu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.btnSuaLop = new System.Windows.Forms.ToolStripButton();
@@ -39,6 +44,11 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.GridSinhVien = new System.Windows.Forms.DataGridView();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnXoaHocSinh = new System.Windows.Forms.ToolStripButton();
             this.btnSuaHocSinh = new System.Windows.Forms.ToolStripButton();
@@ -47,16 +57,6 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.BDSLopHoc = new System.Windows.Forms.BindingSource(this.components);
             this.bdsSinhVien = new System.Windows.Forms.BindingSource(this.components);
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongNam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongNu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLopHoc)).BeginInit();
             this.toolStrip2.SuspendLayout();
@@ -74,7 +74,7 @@
             this.PanelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelLeft.Location = new System.Drawing.Point(0, 0);
             this.PanelLeft.Name = "PanelLeft";
-            this.PanelLeft.Size = new System.Drawing.Size(800, 688);
+            this.PanelLeft.Size = new System.Drawing.Size(641, 559);
             this.PanelLeft.TabIndex = 0;
             // 
             // gridLopHoc
@@ -87,12 +87,52 @@
             this.TongNu,
             this.Column9});
             this.gridLopHoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridLopHoc.Location = new System.Drawing.Point(0, 27);
+            this.gridLopHoc.Location = new System.Drawing.Point(0, 31);
             this.gridLopHoc.Name = "gridLopHoc";
             this.gridLopHoc.RowHeadersWidth = 51;
             this.gridLopHoc.RowTemplate.Height = 24;
-            this.gridLopHoc.Size = new System.Drawing.Size(800, 661);
+            this.gridLopHoc.Size = new System.Drawing.Size(641, 528);
             this.gridLopHoc.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Name";
+            this.Column1.HeaderText = "Tên Lớp";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Room";
+            this.Column2.HeaderText = "Phòng Học";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // TongNam
+            // 
+            this.TongNam.DataPropertyName = "TongNam";
+            this.TongNam.HeaderText = "Tong Nam";
+            this.TongNam.MinimumWidth = 6;
+            this.TongNam.Name = "TongNam";
+            this.TongNam.Width = 60;
+            // 
+            // TongNu
+            // 
+            this.TongNu.DataPropertyName = "TongNu";
+            this.TongNu.HeaderText = "TongNu";
+            this.TongNu.MinimumWidth = 6;
+            this.TongNu.Name = "TongNu";
+            this.TongNu.Width = 60;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "TotalStudent";
+            this.Column9.HeaderText = "TSSV";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 60;
             // 
             // toolStrip2
             // 
@@ -104,7 +144,7 @@
             this.toolStripLabel1});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(800, 27);
+            this.toolStrip2.Size = new System.Drawing.Size(641, 31);
             this.toolStrip2.TabIndex = 1;
             this.toolStrip2.Text = "toolStrip2";
             this.toolStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip2_ItemClicked);
@@ -115,7 +155,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(59, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(59, 28);
             this.toolStripButton1.Text = "Xóa";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -150,9 +190,9 @@
             this.panel1.Controls.Add(this.GridSinhVien);
             this.panel1.Controls.Add(this.toolStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(800, 0);
+            this.panel1.Location = new System.Drawing.Point(641, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(871, 688);
+            this.panel1.Size = new System.Drawing.Size(841, 559);
             this.panel1.TabIndex = 1;
             // 
             // GridSinhVien
@@ -165,13 +205,53 @@
             this.Column7,
             this.Column8});
             this.GridSinhVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GridSinhVien.Location = new System.Drawing.Point(0, 27);
+            this.GridSinhVien.Location = new System.Drawing.Point(0, 31);
             this.GridSinhVien.Name = "GridSinhVien";
             this.GridSinhVien.RowHeadersWidth = 51;
             this.GridSinhVien.RowTemplate.Height = 24;
-            this.GridSinhVien.Size = new System.Drawing.Size(871, 661);
+            this.GridSinhVien.Size = new System.Drawing.Size(841, 528);
             this.GridSinhVien.TabIndex = 0;
             this.GridSinhVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "ID";
+            this.Column3.HeaderText = "Mã Sinh viên";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "FullName";
+            this.Column4.HeaderText = "Họ Tên";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "DateOfBirth";
+            this.Column6.HeaderText = "Ngày Sinh";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "PlaceOfBirth";
+            this.Column7.HeaderText = "Nơi Sinh";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 125;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "GenderString";
+            this.Column8.HeaderText = "Giới Tính";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 125;
             // 
             // toolStrip1
             // 
@@ -184,7 +264,7 @@
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(871, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(841, 31);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -242,95 +322,16 @@
             // 
             this.bdsSinhVien.CurrentChanged += new System.EventHandler(this.bdsSinhVien_CurrentChanged);
             // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "ID";
-            this.Column3.HeaderText = "Mã Sinh viên";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "FullName";
-            this.Column4.HeaderText = "Họ Tên";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "DateOfBirth";
-            this.Column6.HeaderText = "Ngày Sinh";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "PlaceOfBirth";
-            this.Column7.HeaderText = "Nơi Sinh";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 125;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "GenderString";
-            this.Column8.HeaderText = "Giới Tính";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 125;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Name";
-            this.Column1.HeaderText = "Tên Lớp";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Room";
-            this.Column2.HeaderText = "Phòng Học";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // TongNam
-            // 
-            this.TongNam.DataPropertyName = "TongNam";
-            this.TongNam.HeaderText = "Tong Nam";
-            this.TongNam.MinimumWidth = 6;
-            this.TongNam.Name = "TongNam";
-            this.TongNam.Width = 125;
-            // 
-            // TongNu
-            // 
-            this.TongNu.DataPropertyName = "TongNu";
-            this.TongNu.HeaderText = "TongNu";
-            this.TongNu.MinimumWidth = 6;
-            this.TongNu.Name = "TongNu";
-            this.TongNu.Width = 125;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "TotalStudent";
-            this.Column9.HeaderText = "TSSV";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 125;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1671, 688);
+            this.ClientSize = new System.Drawing.Size(1482, 559);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelLeft);
-            this.MinimumSize = new System.Drawing.Size(1500, 574);
+            this.MaximumSize = new System.Drawing.Size(1800, 700);
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.PanelLeft.ResumeLayout(false);
             this.PanelLeft.PerformLayout();
